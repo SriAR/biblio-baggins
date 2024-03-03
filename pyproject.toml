@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "biblio-baggins"
+version = "0.1.0"
+description = "A terrible bibliography manager"
+authors = ["Sricharan AR <arsricharan1999@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+requests = "^2.31.0"
+pyperclip = "^1.8.2"
+click = "^8.1.7"
+bibtexparser = {git = "https://github.com/sciunto-org/python-bibtexparser", rev = "main"}
+
+[tool.poetry.scripts]
+bb = "biblio_baggins.cli:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
