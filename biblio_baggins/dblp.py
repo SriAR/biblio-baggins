@@ -1,4 +1,5 @@
 import requests
+import subprocess
 import webbrowser
 from typing import List
 from .logger import logger
@@ -103,6 +104,8 @@ class DBLPEntry:
                 title="Found your pdf",
                 message="My workers have found your pdf file, Harry",
             )
+
+            subprocess.Popen(['zathura', '--fork', f'{filename}'])
 
         elif self.openaccess:
             webbrowser.open(self.ee)
