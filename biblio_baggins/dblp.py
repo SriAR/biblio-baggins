@@ -133,7 +133,7 @@ class DBLPEntry:
 class DBLP:
     def __init__(self):
         self.base_url = "https://dblp.org/search/publ/api"
-        self.base_url = "https://dblp.uni-trier.de/search/publ/api"
+        #  self.base_url = "https://dblp.uni-trier.de/search/publ/api"
 
     def search(self, query: str) -> List[DBLPEntry]:
         formatted_query = query.replace(" ", "+")
